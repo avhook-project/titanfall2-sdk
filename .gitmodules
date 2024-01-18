@@ -1,0 +1,6 @@
+[submodule "extlibs/uml"]
+	path = extlibs/uml
+	url = https://github.com/VladislavAlpatov/uml
+[submodule "extlibs/signature-scanner"]
+	path = extlibs/signature-scanner
+	url = https://github.com/avhook-project/signature-scanner
