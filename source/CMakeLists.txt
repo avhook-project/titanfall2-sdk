@@ -1,1 +1,1 @@
-target_sources(titanfall2-sdk PRIVATE BaseEntity.cpp EntityList.cpp)
+target_sources(titanfall2-sdk PRIVATE BaseEntity.cpp EntityList.cpp ViewProjectionMatrix.cpp)

@@ -24,12 +24,13 @@ namespace titanfall2_sdk
             throw std::runtime_error(std::format("Failed to find entity list! Pattern: '{}'",
                                                  clientEntityListSignature));
 
-        const auto offsetToList = *(uint32_t*)(scanResult.value()+3);
+        static const auto offsetToList = *(uint32_t*)(scanResult.value()+3);
+        static const auto finalPointer = reinterpret_cast<EntityList*>(scanResult.value()+offsetToList+7);
 
-        return *reinterpret_cast<EntityList*>(scanResult.value()+offsetToList+7);
+        return *finalPointer;
     }
 
-    BaseEntity *EntityList::GetEntityById(size_t id)
+    BaseEntity *EntityList::GetEntityById(size_t id) const
     {
         constexpr auto vtableSize = sizeof(uintptr_t);
 

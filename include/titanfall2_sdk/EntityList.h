@@ -16,7 +16,7 @@ namespace titanfall2_sdk
         EntityList(const EntityList&) = delete;
 
         [[nodiscard]] [[maybe_unused]] static const EntityList& Get();
-        [[nodiscard]] [[maybe_unused]] BaseEntity* GetEntityById(size_t id);
+        [[nodiscard]] [[maybe_unused]] BaseEntity* GetEntityById(size_t id) const;
 
     };
 
